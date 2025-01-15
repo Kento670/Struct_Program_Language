@@ -43,9 +43,13 @@ def test_eval():
     assert eval ("1.23") == 1.23
     assert eval ("-1.23") == -1.23
 
+    
     try:
         eval("1.23")
         assert False, "No error for 1..2"
+    except Exception as e:
+            print("got an error for 1..2")
+
     try:
         eval ("--1")
         assert False, "no error for [--1]"
